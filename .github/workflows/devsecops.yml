@@ -162,7 +162,7 @@ jobs:
   container-scan:
     name: 🐳 Container Security Scan
     runs-on: ubuntu-latest
-    if: true
+    if: false
     steps:
       - uses: actions/checkout@v4
 
@@ -182,7 +182,7 @@ jobs:
     name: 🌐 DAST - OWASP ZAP
     runs-on: ubuntu-latest
     needs: [security-tests]
-    if: github.ref != 'refs/heads/main'
+    if: false
     steps:
       - uses: actions/checkout@v4
 

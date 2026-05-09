@@ -1,0 +1,5 @@
+[allowlist]
+  paths = [
+    "app_vulnerable.py",
+    "code/session1/app_vulnerable.py"
+  ]
