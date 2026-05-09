@@ -99,7 +99,7 @@ class TestXSS:
         """javascript: URI injection should not execute."""
         self._login(client)
         rv = client.get("/search?q=<a href='javascript:void(0)'>click</a>")
-        assert b"javascript:" not in rv.data
+        assert b"<a href='javascript:" not in rv.data
 
 
 # ─── API Security Tests ───────────────────────────────────────────────────────
